@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IHHHHHH</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    background: linear-gradient(to right, #015482, #0277bd);
+    font-family: 'Lora', serif;
+    text-align: center;
+    padding-top: 80px;
+    color: #f5e6cc;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #ffd6e0;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+#yesBtn {
+    background-color: #f5e6cc;
+    color: #015482;
+}
+
+#noBtn {
+    background-color: #f5e6cc;
+    color: #015482;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Can we make this something <span class="highlight">real</span>? 🤭 </h1>
+
+<!-- Confession Lines -->
+<p>I like <span class="highlight">you</span> so much, simply and genuinely.</p>
+<p>I enjoy talking to <span class="highlight">you</span>, I feel comfortable with you, and I want to get to know you more.</p>
+<p>Let’s take a move. I mean, I wanna call <span class="highlight">you</span> mine someday, but only when you feel ready po.</p>
+<p>Would you let me take a <span class="highlight">chance</span> on us? :)))</p>
+
+<!-- Buttons -->
+<a href="confirm.html">
+    <button id="yesBtn">Yes</button>
+</a>
+
+<button id="noBtn">No</button>
+
+<!-- Audio -->
+<audio autoplay loop>
+  <source src="formybaby.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+let scale = 1;
+
+noBtn.addEventListener("mouseover", function() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+
+    // Grow Yes button
+    scale += 0.2;
+    yesBtn.style.transform = "scale(" + scale + ")";
+});
+</script>
+
+</body>
+</html>
